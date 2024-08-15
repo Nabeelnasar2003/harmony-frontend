@@ -1,0 +1,87 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{% static 'style.css'  %}">
+    <head>
+        <title>HARMONY SOFA</title>
+        <link rel="shortcut icon" href="./static/1.jpg">
+    </head>
+
+<body>
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">HARMONY</h2>
+        </div>
+
+
+        
+
+
+        <div class="menu">
+            <table>
+            <ul>
+                <li><a href="harmonyindex.html">HOME</a></li>
+                <li><a href="CATALOGUE.HTML">ADD</a></li>
+                <li><a href="CATALOGUESEEINGcopy.HTML#cata">CATALOGUE</a></li>
+                <!-- <li><a href="#">CONTACT</a></li> -->
+                <div><li><a href="logincopy.html">LOGIN</a></li></div>
+                
+            </ul>
+        </table>
+
+        
+        <div id="cata" class="catalogue">
+          <!-- <h1  align="center">CATALOGUE</h1><br> -->
+          <form name="form1" method="post" action="CATALOGUESEEINGcopy.HTML">
+            {% csrf_token %}
+            <table  align="center" width="800">
+              <td style="height: 60px;" colspan="3" align="center"><b><font aria-setsize="25">CATALOGUE</font></b></td></table>
+            <table align="center" width="800" border="1">
+              <tr>
+                <td style="height: 60px;" align="center"><b>Sno</b></td>
+                <td style="height: 60px;" align="center"><b>Image</b></td>
+                <td style="height: 60px;"  align="center" colspan="2"><b>Details</b> </td>
+                
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <!-- <td align="center" rowspan="2"><button class="button">QUERY</button></td> -->
+               
+              </tr>
+            </table>
+
+            <button onclick="topFunction()" id="myBtn"title="Go to Top"><a href="#">Top</button></a>
+
+
+            <script lang="javascript">
+              let mybutton=document.getElementById("myBtn");
+              window.onscroll = function()
+              {scrollfunction()};
+
+              function scrollfunction(){
+                if(document.body.scrollTop>20||document.documentElement.scrollTop>20){
+                  mybutton.style.display = "block";
+                } else{
+                  mybutton.style.display = "none";
+                }
+                }
+              
+                function topFunction(){
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+            </script>
+          </form>
+
+
+           </div>
+        
+        </div>
+    </div>
+    
+
+</body>
+</html>

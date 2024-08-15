@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{% static 'style.css'  %}">
+    <head>
+
+        <title>HARMONY SOFA</title>
+        <link rel="shortcut icon" href="./static/1.jpg">
+    </head>
+
+<body>
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">HARMONY</h2>
+        </div>
+
+
+        
+
+
+        <div class="menu">
+            <table>
+            <ul>
+                {% comment %} <li><a href="index.html">HOME</a></li> {% endcomment %}
+                <!-- <li><a href="#">ABOUT</a></li> -->
+                {% comment %} <li><a href="CATALOGUE SEEING.HTML">CATALOGUE</a></li>
+                <li><a href="contact.html">CONTACT</a></li> {% endcomment %}
+                <!-- <li><a href="LOGIN.HTML">LOGIN</a></li>
+                <li><a href="REGISTER.HTML">REGISTER</a></li> -->
+            </ul>
+        </table>
+        
+        </div>
+    </div>
+
+    <div  id="reg" data-wow-delay="0.1s">
+      <div class="regi">
+        <form name="form1" method="post" action="login.html">
+          {% csrf_token %}
+      <h1 align="center">REGISTER</h1>
+      <div>
+      <table class="regis" align="center" border="0">
+          
+            <tr>
+            <!-- <td align="center">Name</td> -->
+            <td align="center"><label for="textfield"></label>
+              <input style="height: 40px;" type="text" placeholder="Name" name="textfield" id="textfield" pattern="[A-Za-z]" required /></td>
+          </tr>
+        </div>
+          <tr>
+            <!-- <td align="center">Phone No</td> -->
+            <td align="center"><label for="textfield2"></label>
+              <input style="height: 40px;" type="text" placeholder="Phone No"  name="textfield2" id="textfield2" pattern="[0-9]{11}" required /></td>
+          </tr>
+          <tr>
+            <!-- <td align="center">Email</td> -->
+            <td align="center"><label for="textfield4"></label>
+              <input style="height: 40px;" type="text" placeholder="Email" name="textfield3" id="textfield4"required /></td>
+          </tr>
+          <tr>
+            <!-- <td align="center">password</td> -->
+            <td align="center"><label for="textfield5"></label>
+              <input style="height: 40px;" type="password" placeholder="password"name="textfield4" id="textfield5" pattern="[A-Za-z0-9]{3,9}" required /></td>
+          </tr>
+          <tr>
+            <!-- <td align="center">confirm password</td> -->
+            <td align="center"><label for="textfield6"></label>
+              <input style="height: 40px;" type="password" placeholder="confirm password" name="textfield5" id="textfield6" required/></td>
+          </tr>
+          <tr>
+            <td colspan="2"><label for="textfield3"><br>
+              <div class="submit" align="center">
+                <input class="button" type="submit" name="button" id="button" value="REGISTER" >
+              </div>
+            </label></td>
+          </tr><br>
+          <tr>
+            <div><td align="center" colspan="2"><br><button class="button"><a href="login.html">LOGIN</button></a></td></div>
+          </tr>
+        </table>
+        </form>
+      </div>
+    </div>
+</div> 
+</body>
+</html>

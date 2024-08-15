@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{% static 'style.css'  %}">
+  
+    <head>
+        <title>HARMONY SOFA</title>
+        <link rel="shortcut icon" href="./static/1.jpg">
+    </head>
+
+<body>
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">HARMONY</h2>
+        </div>
+
+        <div class="menu">
+            <table>
+            <ul>
+                <li><a href="harmonyindex.html">HOME</a></li>
+                <li><a href="CATALOGUE.HTML#adddd">ADD</a></li>
+                <li><a href="CATALOGUESEEINGcopy.HTML">CATALOGUE</a></li>
+                <!-- <li><a href="#">CONTACT</a></li> -->
+                <div><li><a href="logincopy.html">LOGIN</a></li></div>
+                
+            </ul>
+        </table>
+        
+        </div>
+    </div>
+    <div id="adddd" class="form">
+     <form action="CATALOGUE.HTML" method="post"  name="form1" id="form1">
+      {% csrf_token %}
+      <table class="center" align="center" width="600" border="0">
+        <tr>
+          <td style="font-size: xx-large;height: 30px ;width: 30;" colspan="3" align="center"><b>ADD DESIGN</b></td>
+        </tr>
+      </table>
+      <table class="center" align="center" width="600" border="2">
+        <tr>
+          <td style="height: 60px;" align="center">Product Name</td>
+          <td  colspan="2"><label for="textfield"></label>
+          <input placeholder="Product Name" type="text" name="textfield" id="textfield" /></td>
+        </tr>
+        <tr>
+          <td style="height: 60px;" align="center">Product type</td>
+          <td><p>
+            <label></label>
+              <input  type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_2" />
+              Sofa</label>
+          </p></td>
+        </tr>
+        <tr>
+          <td style="height: 60px;" align="center">Image</td>
+          <td><label for="fileField"></label>
+          <input type="file" name="fileField" id="fileField" /></td>
+        </tr>
+        <tr>
+          <td style="height: 60px;" colspan="2"><div align="center">
+            <button class="button"><a href="CATALOGUE.HTML#addd">ADD</a></button>
+          </div></td>
+        </tr>
+      </table>
+
+      <button onclick="topFunction()" id="myBtn"title="Go to Top">Top</button>
+
+
+            <script lang="javascript">
+              let mybutton=document.getElementById("myBtn");
+              window.onscroll = function()
+              {scrollfunction()};
+
+              function scrollfunction(){
+                if(document.body.scrollTop>20||document.documentElement.scrollTop>20){
+                  mybutton.style.display = "block";
+                } else{
+                  mybutton.style.display = "none";
+                }
+                }
+              
+                function topFunction(){
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+            </script>
+
+    </form>
+  </div>
+
+    <!-- <div  class="col-lg-8 my-6 mb-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="bg-primary text-center p-5">
+            <h1 align="right" class="login">LOGIN</h1>
+            <form  method="post" action="#">
+                               <div class="row g-3">
+                    <div class="col-sm-12">
+                        <div align="right"  class="username">
+                            <label for="username">User Name</label>
+                        <input type="text"  id="uname" name="textfield" placeholder=" User Name" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div align="right"  class="password">
+                            <label for="password">Password</label>
+                            <input type="password"  id="pass" name="textfield2" placeholder="Password" pattern="[A-Za-z0-9]{3,9}" required>
+                        </div>
+                    </div>
+                    <div align="right" class=loginbutton>
+                        <button class="button"  type="submit"><a href="#"></a>Login</button>
+                    </div>
+                    <div class="regi" align="right"><strong>    Dont have account?? <button class="button"> <a href="registerindex.html">Register</button></a></strong></td></div>
+                </div>
+            </form>
+        </div>
+    </div> -->
+    <!-- <div class="form">
+        <form align="center" id="form1" name="form1" method="get">
+            <table align="left"  width="200" border="2" >
+                <tr>
+                    <td bgcolor="white" colspan="2">LOGIN</td>
+                </tr>
+              <tr>
+                
+                <td bgcolor="white">
+                <input type="username" placeholder="username" name="username"  id="username" /></td>
+              </tr>
+              <tr>
+                
+                <td bgcolor="white">
+                <input  type="password" placeholder="password" name="password" id="password" /></td>
+              </tr>
+              <tr>
+                <td bgcolor="white" colspan="2"><div align="center">
+                  <input type="submit" name="button" id="button" value="Login" />
+                </div></td>
+              </tr>
+              <tr>
+                <td bgcolor="white" colspan="2">
+                
+              </tr>
+            </table>
+          </form> -->
+    </div>
+<!-- <br><br><br><br><br><br><br><br><br>
+    <div class="content">
+        <h1>HARMONY SOFAS AND INTERIORS <br></h1>
+        <p class="par">opened now <br></p>
+    </div> -->
+</div> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
